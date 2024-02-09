@@ -6,7 +6,7 @@
     - name: 'creating domain controller users'
       microsoft.ad.user:
         name: 'bob'
-        firtname: 'Bob'
+        firstname: 'Bob'
         surname: 'Smith'
         company: 'BobCo'
         password: 'B0bP4ssw0rd'
