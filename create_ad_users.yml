@@ -7,6 +7,7 @@
   tasks:
     - name: 'creating domain controller users'
       microsoft.ad.user:
-        name: '{{ users }}'
+        name: '{{ item }}'
         password: 'B0bP4ssw0rd'
         state: present
+      loop: '{{ users }}'
