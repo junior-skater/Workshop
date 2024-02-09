@@ -1,16 +1,12 @@
 ---
 - name: 'creating AD objects'
   hosts: windows
+  vars_files:
+    - users_list.yml
   gather_facts: true
   tasks:
     - name: 'creating domain controller users'
       microsoft.ad.user:
-        name: 'bob'
-        firstname: 'Bob'
-        surname: 'Smith'
-        company: 'BobCo'
+        name: '{{ users }}'
         password: 'B0bP4ssw0rd'
         state: present
-        groups:
-          set:
-          - Domain Admins
