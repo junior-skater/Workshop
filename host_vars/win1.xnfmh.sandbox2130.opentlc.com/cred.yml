@@ -1,0 +1,4 @@
+---
+ansible_host: "win1.xnfmh.sandbox2130.opentlc.com"
+ansible_password: "MTU1MDQ5_1"
+ansible_user: "Administrator"

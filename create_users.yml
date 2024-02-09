@@ -1,0 +1,10 @@
+---
+- name: 'creating AD objects'
+  hosts: windows
+  gather_facts: false
+  tasks:
+   - name: Ensure user bob is present
+     ansible.windows.win_user:
+       name: bob
+       password: B0bP4ssw0rd
+       state: present
