@@ -5,11 +5,11 @@
   tasks:
     - name: 'creating domain controller users'
       microsoft.ad.user:
-        name: bob
-        firtname: Bob
-        surname: Smith
-        company: BobCo
-        password: B0bP4ssw0rd
+        name: 'bob'
+        firtname: 'Bob'
+        surname: 'Smith'
+        company: 'BobCo'
+        password: 'B0bP4ssw0rd'
         state: present
         groups:
           set:
