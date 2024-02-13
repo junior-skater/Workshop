@@ -23,6 +23,7 @@
       microsoft.ad.user:
         name: '{{ item }}'
         password: 'B0bP4ssw0rd'
+        update_password: on_create
         path: OU=Workshop,DC=Demo,DC=local
         state: present
         groups:
