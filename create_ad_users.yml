@@ -8,8 +8,8 @@
   
     - name: 'Validar que la OU de RH existe'
       microsoft.ad.ou:
-        name: 'Workshop'
-        path: 'DC=Demo,DC=local'
+        name: Workshop
+        path: CN=Users,DC=Demo,DC=local'
         state: present
         protect_from_deletion: false
   
@@ -17,13 +17,13 @@
       microsoft.ad.group:
        name: 'Workshop_group'
        scope: global
-
+       path: CN=Users,DC=Demo,DC=local'
 
     - name: 'Crear usuarios de dominio - departamento de RH'
       microsoft.ad.user:
         name: '{{ item }}'
         password: 'B0bP4ssw0rd'
-        path: 'DC=Workshop,DC=Demo,DC=local'
+          # path: 'DC=Workshop,DC=Demo,DC=local'
         state: present
         groups:
           add:
