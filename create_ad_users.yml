@@ -8,7 +8,7 @@
   
     - name: 'Validar que la OU de RH existe'
       microsoft.ad.ou:
-        name: Unidad de Workshop
+        identity: Workshop
         path: OU=Workshop,DC=Demo,DC=local
         state: present
         protect_from_deletion: false
