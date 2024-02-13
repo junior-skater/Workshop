@@ -8,7 +8,7 @@
   
     - name: 'Validar que la OU de RH existe'
       microsoft.ad.ou:
-        name: Workshop
+        name: Unidad de Workshop
         path: OU=Workshop,DC=Demo,DC=local
         state: present
         protect_from_deletion: false
@@ -23,7 +23,7 @@
       microsoft.ad.user:
         name: '{{ item }}'
         password: 'B0bP4ssw0rd'
-          # path: 'DC=Workshop,DC=Demo,DC=local'
+        path: OU=Workshop,DC=Demo,DC=local
         state: present
         groups:
           add:
