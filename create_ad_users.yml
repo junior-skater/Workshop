@@ -1,13 +1,34 @@
 ---
-- name: 'creating AD objects'
+- name: 'Creando objetos de AD'
   hosts: windows
   vars_files:
     - users_list.yml
   gather_facts: true
   tasks:
-    - name: 'creating domain controller users'
+  
+    - name: 'Validar que la OU de RH existe'
+      microsoft.ad.ou:
+        name: 'Workshop'
+        path: 'DC=Demo,DC=local'
+        state: present
+        protect_from_deletion: false
+  
+    - name: 'crear grupo'
+      microsoft.ad.group:
+       name: 'Workshop_group'
+       scope: global
+
+
+    - name: 'Crear usuarios de dominio - departamento de RH'
       microsoft.ad.user:
         name: '{{ item }}'
         password: 'B0bP4ssw0rd'
+        path: 'DC=Workshop,DC=Demo,DC=local'
         state: present
+        groups:
+          add:
+           - Workshop_group
       loop: '{{ users }}'
+
+
+
