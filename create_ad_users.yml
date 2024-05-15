@@ -1,6 +1,6 @@
 ---
 - name: 'Creando objetos de AD'
-  hosts: testing
+  #hosts: testing
   vars_files:
     - users_list.yml
   gather_facts: true
