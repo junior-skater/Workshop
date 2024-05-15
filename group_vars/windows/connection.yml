@@ -1,6 +1,6 @@
 ---
-ansible_winrm_transport: "credssp"
-ansible_connection: winrm
+#ansible_winrm_transport: "credssp"
+#ansible_connection: winrm
 #ansible_winrm_credssp_disable_tlsv1_2: true
-ansible_winrm_server_cert_validation: "ignore"
-ansible_port: 5985
+#ansible_winrm_server_cert_validation: "ignore"
+#ansible_port: 5985
