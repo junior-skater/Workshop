@@ -1,0 +1,14 @@
+[windows]
+ansible-demo.eastus2.cloudapp.azure.com
+
+[testing]
+192.168.80.31 
+
+[testing:vars] 
+ansible_user="Junior"
+ansible_password="24Df6aee4536."
+ansible_port="5985"
+ansible_connection="winrm"
+ansible_winrm_transport="ntlm"
+ansible_winrm_server_cert_validation="ignore"
+
