@@ -5,8 +5,8 @@
 192.168.80.31 
 
 #[testing:vars] 
-#ansible_user="Junior"
-#ansible_password="24Df6aee4536."
+#ansible_user=""
+#ansible_password=""
 #ansible_port="5985"
 #ansible_connection="winrm"
 #ansible_winrm_transport="ntlm"
