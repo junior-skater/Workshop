@@ -13,7 +13,8 @@
   rules: 
    - name: Exec play
      condition: event.url_check == "up"
-     action:
-       run_playbook: 
+     actions:
+       run_job_template: 
          name: Deploy_Container_APP1
+         organization: DEMO
 
