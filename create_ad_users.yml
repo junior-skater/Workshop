@@ -9,7 +9,7 @@
     - name: 'Validar que la OU de RH existe'
       microsoft.ad.ou:
         name: Workshop
-        path: DC=adexample,DC=local
+        path: DC=ipexlab,DC=local
         state: present
         protect_from_deletion: false
   
@@ -17,14 +17,14 @@
       microsoft.ad.group:
        name: 'Workshop_group'
        scope: global
-       path: OU=Workshop,DC=adexample,DC=local
+       path: OU=Workshop,DC=ipexlab,DC=local
 
     - name: 'Crear usuarios de dominio - departamento de RH'
       microsoft.ad.user:
         name: '{{ item }}'
         password: 'B0bP4ssw0rd'
         update_password: on_create
-        path: OU=Workshop,DC=adexample,DC=local
+        path: OU=Workshop,DC=ipexlab,DC=local
         state: present
         groups:
           add:
