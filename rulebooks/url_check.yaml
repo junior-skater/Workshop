@@ -6,7 +6,7 @@
    - name: Match web server events
      ansible.eda.url_check:
        urls:
-        - http://10.0.32.207/index.html
+        - http://10.0.32.77/
        delay: 5
 
 
