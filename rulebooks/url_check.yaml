@@ -12,7 +12,7 @@
 
   rules: 
    - name: Exec play
-     condition: event.url_check == "up"
+     condition: event.url_check.status == "down"
      actions:
        run_job_template: 
          name: Deploy_Container_APP1
